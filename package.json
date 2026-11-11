@@ -1,0 +1,29 @@
+{
+  "name": "penpot-to-figma",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Figma plugin that imports .penpot files (Penpot → Figma)",
+  "type": "module",
+  "scripts": {
+    "build:sandbox": "node scripts/build-sandbox.mjs",
+    "build:ui": "vite build",
+    "build": "npm run build:ui && npm run build:sandbox",
+    "dev:sandbox": "esbuild src/sandbox/main.ts --bundle --outfile=dist/code.js --target=es2018 --format=iife --watch",
+    "dev:ui": "vite build --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.121.0",
+    "@penpot/library": "^1.3.0",
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0"
+  }
+}
