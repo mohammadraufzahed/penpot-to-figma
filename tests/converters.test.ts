@@ -28,7 +28,8 @@ describe('matrix', () => {
     expect(p.y).toBeCloseTo(23);
 
     const inv = invert(t);
-    const back = applyToPoint(inv, p.x, p.y);
+    expect(inv).not.toBeNull();
+    const back = applyToPoint(inv!, p.x, p.y);
     expect(back.x).toBeCloseTo(1);
     expect(back.y).toBeCloseTo(1);
   });
