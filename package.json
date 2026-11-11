@@ -12,7 +12,8 @@
     "dev:ui": "vite build --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "verify:dist": "node scripts/verify-dist.mjs"
   },
   "dependencies": {
     "jszip": "^3.10.1"
